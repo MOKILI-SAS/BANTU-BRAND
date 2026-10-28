@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Charte officielle Bantu Brand : Rouge, Orange, Jaune */
+  --bantu-red: #D9230F;
+  --bantu-red-dark: #A01505;
+  --bantu-red-light: #F03A24;
+  --bantu-orange: #F36F09;
+  --bantu-orange-dark: #C45400;
+  --bantu-orange-light: #FF8826;
+  --bantu-yellow: #FFBF00;
+  --bantu-yellow-dark: #D69E00;
+  --bantu-yellow-light: #FFD54F;
+  --bantu-gold: #FFBF00;
+
+  --bantu-dark: #0B0B0F;
+  --bantu-dark-card: #131319;
+  --bantu-dark-border: #22222E;
+  --bantu-cream: #FAF7F2;
+  --bantu-sand: #F0E8DA;
+  --bantu-muted: #9E9AA8;
+
+  --background: #0B0B0F;
+  --foreground: #FAF7F2;
 }
 
 @theme inline {
+  --color-bantu-red: var(--bantu-red);
+  --color-bantu-red-dark: var(--bantu-red-dark);
+  --color-bantu-red-light: var(--bantu-red-light);
+  --color-bantu-orange: var(--bantu-orange);
+  --color-bantu-orange-dark: var(--bantu-orange-dark);
+  --color-bantu-orange-light: var(--bantu-orange-light);
+  --color-bantu-yellow: var(--bantu-yellow);
+  --color-bantu-yellow-dark: var(--bantu-yellow-dark);
+  --color-bantu-yellow-light: var(--bantu-yellow-light);
+  --color-bantu-gold: var(--bantu-yellow);
+  --color-bantu-dark: var(--bantu-dark);
+  --color-bantu-dark-card: var(--bantu-dark-card);
+  --color-bantu-dark-border: var(--bantu-dark-border);
+  --color-bantu-cream: var(--bantu-cream);
+  --color-bantu-sand: var(--bantu-sand);
+  --color-bantu-muted: var(--bantu-muted);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Gradients et Effets Bantu Tricolores : Rouge, Orange, Jaune */
+.bantu-tricolor-gradient {
+  background: linear-gradient(135deg, #D9230F 0%, #F36F09 50%, #FFBF00 100%);
+}
+
+.bantu-tricolor-border {
+  border-image: linear-gradient(to right, #D9230F, #F36F09, #FFBF00) 1;
+}
+
+.bantu-glow-gold {
+  box-shadow: 0 0 35px -5px rgba(255, 191, 0, 0.35);
+}
+
+.bantu-glow-red {
+  box-shadow: 0 0 35px -5px rgba(217, 35, 15, 0.4);
+}
+
+.bantu-glow-orange {
+  box-shadow: 0 0 35px -5px rgba(243, 111, 9, 0.35);
+}
+
+.bantu-gradient-text {
+  background: linear-gradient(135deg, #FFBF00 0%, #F36F09 50%, #D9230F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bantu-glass {
+  background: rgba(19, 19, 25, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 191, 0, 0.15);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #252533;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F36F09;
 }

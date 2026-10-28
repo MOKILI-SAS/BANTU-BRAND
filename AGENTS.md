@@ -1,9 +1,28 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# AGENTS.md — DIRECTIVES D'INGÉNIERIE BANTU BRAND (MOKILI FRAMEWORK)
 
-# This is NOT the Next.js you know
+Ce projet applique les principes fondamentaux de **MOKILI TECH CORE V1.0** et **MOKILI MASTER PROMPT V1.1**.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Règles fondamentales
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+1. **Architecture & Stack :**
+   - Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4.
+   - Ne pas introduire de backend lourd ou de base de données relationnelle sans justification démontrée.
+   - Le stockage est géré de manière atomique et modulaire via `src/lib/data-store.ts`.
 
-<!-- END:nextjs-agent-rules -->
+2. **Sécurité :**
+   - Aucun credential, clé API ou secret en dur dans le code.
+   - Variables d'environnement définies dans `.env` et documentées dans `.env.example`.
+   - `.env` ne doit JAMAIS être commité.
+
+3. **Direction Artistique Bantu Brand :**
+   - Palette : Bantu Terracotta (`#A62B17`), Bantu Ocre Gold (`#E06A00`), Ébène studio (`#0F0F12`), Lin chaud (`#FAF7F2`).
+   - Signature visuelle : frise géométrique vectorielle Bantu (`BantuPattern.tsx`) issue de la charte officielle.
+   - Imagerie : photographies authentiques d'Afrique contemporaine issues du projet.
+   - Éviter absolument tout cliché folklorique : l'identité est africaine, contemporaine, créative et internationale.
+
+4. **Mention Obligatoire Footer :**
+   - Le footer doit afficher en permanence et de façon inaltérable la mention cliquable :
+     `Propulsé par MOKILI` (lien vers `https://mokili.io`).
+
+5. **Pilotage & Documentation :**
+   - Maintenir à jour `PLAN.md` et `SUIVI.md` lors de chaque évolution majeure.
