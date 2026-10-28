@@ -58,11 +58,12 @@ Le projet respecte l'intégralité des standards du **Framework MOKILI** :
 ### Commandes
 
 ```bash
-# Se placer dans le répertoire du projet
-cd bantu-site
+# Cloner le dépôt
+git clone https://github.com/MOKILI-SAS/BANTU-BRAND.git
+cd BANTU-BRAND
 
 # Installer les dépendances
-npm install
+pnpm install # ou npm install
 
 # Lancer le serveur de développement
 npm run dev
